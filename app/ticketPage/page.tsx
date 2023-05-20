@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Header from './components/Header';
-import TicketCards from './components/TicketCards';
 import Footer from './components/Footer';
+import TicketInfo from './components/TicketInfo';
 
 export const metadata: Metadata = {
   title: "Events | Let's Tap In",
@@ -14,7 +14,7 @@ export default function Home(){
       <html>
     <body>    
       <Header />
-      <TicketCards />
+      <TicketInfo />
       <Footer />
       
     </body>
