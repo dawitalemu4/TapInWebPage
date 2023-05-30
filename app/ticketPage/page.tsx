@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import TicketInfo from './components/TicketInfo';
 
 export const metadata: Metadata = {
-  title: "Events | Let's Tap In",
+  title: "Ticket | Let's Tap In",
   description: "Let's All Tap In!",
 };
 

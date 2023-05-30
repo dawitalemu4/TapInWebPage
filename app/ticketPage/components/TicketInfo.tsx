@@ -13,72 +13,69 @@ const TicketInfo: React.FC = () => {
 return (
     <div id='TicketInfo'>
 
-        <div id='TicketInfoHeaderContainer'>
-            <div id='TicketInfoTextContainer'>
-                <p id='TicketInfoText'>Events</p>
+        <div id='TicketInfoContainer'>
+            <div id='TicketInfoImageContainer'>
+                <img src='/sampleTicketImage.jpg' id='TicketInfoImage'/>
             </div>
-            <div id='TicketInfoFiltersContainer'>
-                <button id='All'>All</button>
-                <button id='Today'>Today</button>
+            <div id='TicketInfoTextContainer'>
+                <h1 id='TicketInfoTitle'>Steve Aoki Nightmare</h1>
+                <h2 id='TicketInfoSubTitle'>Presented by Hidden City & Crescendo Music</h2>
+                <h3 id='TicketInfoVenue'>Historic Columbia Speedway</h3>
+                <h4 id='TicketInfoDate'>Friday, July 4, 9:00PM</h4>
+                <h5 id='TicketInfoAddress'>2001 Charleston Hwy, Coyce, SC 29033</h5>
+            </div>
+            <div id='TicketInfoOverviewContainer'>
+                <p id='TicketInfoOverview'></p>
             </div>
         </div>
 
-        <div id='TicketContainer'>
-            <div id='Ticket'>
-                <img src='/sampleTicketImage.jpg' id='TicketImage'/>
-                <div id='TicketTextContainer'>
-                    <div id='DateContainer'>
-                        <p id='TicketDateTop'>FRI</p>
-                        <p id='TicketDateBottom'>July 4</p>
+        <div id='TicketsContainer'>
+            <div id='Tickets'>
+                <div id='TicketOption1Container'>
+                    <div id='PriceContainer'>
+
                     </div>
-                    <div id='TicketTitleContainer'>
-                        <p id='TicketTitle'>Title lorem ipsum idk</p>
-                        <p id='TicketLocation'>SECU Mom's Basement</p>
+                    <div id='TicketTypeContainer'>
+
+                    </div>
+                    <div id='QuantityContainer'>
+
+                    </div>
+                </div>
+                <div id='TicketOption2Container'>
+                    <div id='PriceContainer'>
+
+                    </div>
+                    <div id='TicketTypeContainer'>
+
+                    </div>
+                    <div id='QuantityContainer'>
+                        
+                    </div>
+                </div>
+                <div id='TicketOption3Container'>
+                    <div id='PriceContainer'>
+
+                    </div>
+                    <div id='TicketTypeContainer'>
+
+                    </div>
+                    <div id='QuantityContainer'>
+                        
+                    </div>
+                </div>
+                <div id='TicketOption4Container'>
+                    <div id='PriceContainer'>
+
+                    </div>
+                    <div id='TicketTypeContainer'>
+
+                    </div>
+                    <div id='QuantityContainer'>
+                        
                     </div>
                 </div>
             </div>
-
-            <div id='Ticket'>
-                <img src='/sampleTicketImage.jpg' id='TicketImage'/>
-                <div id='TicketTextContainer'>
-                    <div id='DateContainer'>
-                        <p id='TicketDateTop'>FRI</p>
-                        <p id='TicketDateBottom'>July 4</p>
-                    </div>
-                    <div id='TicketTitleContainer'>
-                        <p id='TicketTitle'>Title lorem ipsum idk</p>
-                        <p id='TicketLocation'>SECU Mom's Basement</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id='Ticket'>
-                <img src='/sampleTicketImage.jpg' id='TicketImage'/>
-                <div id='TicketTextContainer'>
-                    <div id='DateContainer'>
-                        <p id='TicketDateTop'>FRI</p>
-                        <p id='TicketDateBottom'>July 4</p>
-                    </div>
-                    <div id='TicketTitleContainer'>
-                        <p id='TicketTitle'>Title lorem ipsum idk</p>
-                        <p id='TicketLocation'>SECU Mom's Basement</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id='Ticket'>
-                <img src='/sampleTicketImage.jpg' id='TicketImage'/>
-                <div id='TicketTextContainer'>
-                    <div id='DateContainer'>
-                        <p id='TicketDateTop'>FRI</p>
-                        <p id='TicketDateBottom'>July 4</p>
-                    </div>
-                    <div id='TicketTitleContainer'>
-                        <p id='TicketTitle'>Title lorem ipsum idk</p>
-                        <p id='TicketLocation'>SECU Mom's Basement</p>
-                    </div>
-                </div>
-            </div>        
         </div>
 
     <style>
@@ -96,7 +93,7 @@ return (
         justify-content: flex-start;
         flex-direction: column;
     }
-    #TicketInfoHeaderContainer {
+    #TicketInfoContainer {
         display: flex;
         position: relative;
         width: 90%;
@@ -104,7 +101,7 @@ return (
         flex-direction: column;
         justify-content: flex-start;
     }
-    #TicketInfoTextContainer {
+    #TicketInfoImageContainer {
         display: flex;
         width: 50%;
         height: 50%;
@@ -112,16 +109,64 @@ return (
         justify-content: flex-start;
         align-items: center;
     }
-    #TicketInfoText {
+    #TicketInfoImage {
+    
+    }
+    #TicketInfoTextContainer {
         font-family: PoppinsBold;
         color: white;
         font-size: 220%;
     }
-    #TicketInfoFiltersContainer {
+    #TicketInfoTitle {
+
+    }
+    #TicketInfoSubTitle {
+
+    }
+    #TicketInfoVenue {
+
+    }
+    #TicketInfoDate {
+
+    }
+    #TicketInfoAddress {
+
+    }
+    #TicketInfoOverviewContainer {
+
+    }
+    #TicketInfoOverview {
         display: flex;
         width: 200px;
         padding: 2px 0;
         justify-content: flex-start;
+    }
+    #TicketsContainer {
+        
+    }
+    #Tickets {
+
+    }
+    #TicketOption1Container {
+
+    }
+    #TicketOption2Container {
+
+    }
+    #TicketOption3Container {
+
+    }
+    #TicketOption4Container {
+
+    }
+    #PriceContainer {
+
+    }
+    #TicketTypeContainer {
+
+    }
+    #QuantityContainer {
+
     }
     #All, #Today {
         font-family: PoppinsSemiBold;
@@ -140,7 +185,7 @@ return (
         opacity: 0.5;
         cursor: pointer;
     }
-    #TicketContainer {
+    #TicketsContainer {
         display: flex;
         position: relative;
         width: 90%; 

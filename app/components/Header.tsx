@@ -130,26 +130,32 @@ return (
         opacity: 0.5;
     }
 
-    @media (max-width: 768px) {
-        #HeaderIconsContainer {
-            width: 18%;
-            margin-right: 2%;
-    }
-    #Facebook {
-        margin-left: -5px;
-    }
-    #TicketHomeLogoContainer {
-        width: 20%;
-    }
-    #NavbarTextContainer {
-        width: 50%;
-        justify-content: center;
-    }
-    #NavbarTextContainer li {
-        font-size: 100%;
-        padding: 5px;
-    }
-    }
+    //about to add hamburger mobile menu
+
+    // @media (max-width: 898px) {
+        
+    // }
+
+    // @media (max-width: 768px) {
+    //     #HeaderIconsContainer {
+    //         width: 18%;
+    //         margin-right: 2%;
+    // }
+    // #Facebook {
+    //     margin-left: -5px;
+    // }
+    // #TicketHomeLogoContainer {
+    //     width: 20%;
+    // }
+    // #NavbarTextContainer {
+    //     width: 50%;
+    //     justify-content: center;
+    // }
+    // #NavbarTextContainer li {
+    //     font-size: 100%;
+    //     padding: 5px;
+    // }
+    // }
     `}
     </style>       
     </div>
