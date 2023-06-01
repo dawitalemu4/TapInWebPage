@@ -6,11 +6,8 @@
 body{
   display: flex;
   position: relative;
-  background-color: black;
-  background-image: url(/postcardBackground.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  flex-direction: column;
+  background-color: rgba(46, 188, 147);
+  background-image: none;
 }
 
 

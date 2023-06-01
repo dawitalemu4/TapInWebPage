@@ -8,7 +8,10 @@ const TicketCards: React.FC = () => {
     //idk how to write this until i get the backend params
 
     //function for Ticket cards to redirect to webpage with Ticket id
-    //same ^
+    //same ^ for now ill do /ticketPage
+    const linkRedirect = () => {
+        window.location.href = '/ticketPage';
+    }
 
 return (
     <div id='TicketCards'>
@@ -24,7 +27,7 @@ return (
         </div>
 
         <div id='TicketContainer'>
-            <div id='Ticket'>
+            <div id='Ticket' onClick={linkRedirect}>
                 <img src='/sampleTicketImage.jpg' id='TicketImage'/>
                 <div id='TicketTextContainer'>
                     <div id='DateContainer'>
@@ -38,7 +41,7 @@ return (
                 </div>
             </div>
 
-            <div id='Ticket'>
+            <div id='Ticket' onClick={linkRedirect}>
                 <img src='/sampleTicketImage.jpg' id='TicketImage'/>
                 <div id='TicketTextContainer'>
                     <div id='DateContainer'>
@@ -52,7 +55,7 @@ return (
                 </div>
             </div>
 
-            <div id='Ticket'>
+            <div id='Ticket' onClick={linkRedirect}>
                 <img src='/sampleTicketImage.jpg' id='TicketImage'/>
                 <div id='TicketTextContainer'>
                     <div id='DateContainer'>
@@ -66,7 +69,7 @@ return (
                 </div>
             </div>
 
-            <div id='Ticket'>
+            <div id='Ticket' onClick={linkRedirect}>
                 <img src='/sampleTicketImage.jpg' id='TicketImage'/>
                 <div id='TicketTextContainer'>
                     <div id='DateContainer'>
@@ -79,7 +82,7 @@ return (
                     </div>
                 </div>
             </div> 
-            <div id='Ticket'>
+            <div id='Ticket' onClick={linkRedirect}>
                 <img src='/sampleTicketImage.jpg' id='TicketImage'/>
                 <div id='TicketTextContainer'>
                     <div id='DateContainer'>
@@ -147,7 +150,7 @@ return (
         margin-bottom: 0;
         margin-right: 10px;
         border-radius: 40% / 90%;
-        border: 1px solid grey;
+        border: 2px solid grey;
     }
     #All:hover, #Today:hover {
         opacity: 0.5;
