@@ -94,9 +94,9 @@ return (
                         <p id='TicketLocation'>SECU Mom's Basement</p>
                     </div>
                 </div>
-            </div>            
-        </div>
+            </div>   
 
+    </div>
     <style>
     {` 
     #TicketCards {

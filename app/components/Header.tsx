@@ -1,8 +1,10 @@
 'use client'
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 import {FiFacebook} from 'react-icons/fi';
 import {RxInstagramLogo} from 'react-icons/rx';
 import {SlSocialYoutube} from 'react-icons/sl';
+import {FaBars} from 'react-icons/fa';
 
 
 const Header: React.FC = () => {
@@ -29,7 +31,7 @@ const Header: React.FC = () => {
 
     //used a function because I didn't want to put an <a> tag on an <img>
     const linkRedirect = () => {
-        window.location.href = '/ticketPage';
+        window.location.href = 'https://letsalltapin.com';
       }
 
 return (
@@ -37,20 +39,17 @@ return (
         
         <div id='HeaderContainer' className={scrolled ? 'scrolled' : ''}>
             <div id='TicketHomeLogoContainer'>
-                <img src='/TicketHomeLogo.png' id='TicketHomeLogo' onClick={linkRedirect}/>
+                <img src='/Logo.png' id='TicketHomeLogo' onClick={linkRedirect}/>
             </div>
-            <img
-            id="bars"
-            src="bars.jpg"
-            className={showMenu ? 'block' : 'hidden'}
-            onClick={() => setShowMenu(!showMenu)}
-            />
-        <ul id='NavbarTextContainer' style={{ display: showMenu ? 'flex' : 'none' }}>
-            <li id='App'> <a href='https://letsalltapin.com'> App</a></li>
-            <li id='Events'><a href='https://letsalltapin.com'>Events</a></li>
-            <li id='Partners'><a href='https://letsalltapin.com'>Partners</a></li>
-            <li id='Request'><a href='https://letsalltapin.com'>Request A Demo</a></li>
-        </ul>
+
+            <div id="BarsContainer"> <Link href='/menu'> <FaBars id='Bars'/> </Link> </div>
+            
+            <ul id='NavbarTextContainer' style={{ display: showMenu ? 'flex' : 'none' }}>
+                <li id='App'> <a href='https://letsalltapin.com'> App</a></li>
+                <li id='Events'><a href='https://letsalltapin.com'>Events</a></li>
+                <li id='Partners'><a href='https://letsalltapin.com'>Partners</a></li>
+                <li id='Request'><a href='https://letsalltapin.com'>Request A Demo</a></li>
+            </ul>
 
             <div id='HeaderIconsContainer' style={{ display: showMenu ? 'flex' : 'none' }}>
                 <div id='Youtube'> <a href='https://www.youtube.com/channel/UCLSpAM-bqwWBf9lzRSBPKoQ' target='blank'> <SlSocialYoutube /> </a> </div>
@@ -88,7 +87,7 @@ return (
     #HeaderContainer.scrolled {
         width: 100%;
         padding: 0 2.5%;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 0.85);
     }
     #TicketHomeLogoContainer {
         display: flex;
@@ -97,6 +96,7 @@ return (
     }
     #TicketHomeLogo {
         border-radius: 5%;
+        padding: 5px;
     }
     #TicketHomeLogo:hover {
         opacity: 0.5;
@@ -143,17 +143,24 @@ return (
             width:70px;
             height: 70px;
         }
-        #bars {
-            cursor: pointer;
+        #BarsContainer {
             display: flex;
-            width: 70px;
-            height: 70px;
-            top: 1;
-            z-index: 4;
-          }
+            width: 20%;
+            height: 80%;
+            color: white;
+            justify-content: center;
+            align-items: center;
+        }
+        #Bars{
+            font-size: 50px;
+        }
+        #Bars:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
     }
     @media (min-width: 891px) {
-        #bars {
+        #BarsContainer {
           display: none;
         }
         #NavbarTextContainer, #HeaderIconsContainer {

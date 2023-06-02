@@ -1,5 +1,6 @@
 'use client'
 import React from 'react';
+import {IoIosArrowBack} from 'react-icons/io';
 import {CiLocationOn} from 'react-icons/ci';
 
 const TicketInfo: React.FC = () => {
@@ -11,8 +12,15 @@ const TicketInfo: React.FC = () => {
         window.open('https://www.google.com/maps/search/?api=1&query=2001+Charleston+Hwy%2C+Coyce%2C+SC+29033', '_blank');
     }
 
+    const homeRedirect = () => {
+        window.location.href = '/';
+    }
+
 return (
     <div id='TicketInfo'>
+
+        <div id='BackButtonContainer'><IoIosArrowBack id='BackButton' onClick={homeRedirect}/></div>
+        
 
         <div id='TicketInfoContainer'>
 
@@ -32,7 +40,7 @@ return (
 
         <div id='TicketInfoOverviewContainer'>
             <h1 id='TicketInfoOverviewHeader'>Overview</h1>
-            <p id='TicketInfoOverview'>Lorem ipsum dolor sit amet consectetur. Donec odio sit risus pulvinar odio ligula turpis scelerisque dignissim. Quis non duis fames purus. Quis quis rhoncus malesuada convallis purus consequat ac.Lorem ipsum dolor sit amet consectetur. Donec odio sit risus pulvinar odio ligula turpis scelerisque dignissim. Quis non duis fames purus. Quis quis rhoncus malesuada convallis purus consequat ac.</p>
+            <p id='TicketInfoOverview'>Lorem ipsum dolor sit amet consectetur. Donec odio sit risus pulvinar odio ligula turpis scelerisque dignissim. Quis non duis fames purus. Quis quis rhoncus malesuada convallis purus consequat ac.Lorem ipsum dolor sit amet consectetur. Donec odio sit risus pulvinar odio ligula turpis scelerisque dignissim. Quis non duis fames purus. </p>
         </div>
 
     <style>
@@ -112,6 +120,9 @@ return (
         font-size: 17px;
         cursor: pointer;
     }
+    #TicketInfoAddress:hover {
+        opacity: 0.5;
+    }
     #TicketInfoOverviewContainer {
         display: flex;
         position: relative;
@@ -129,15 +140,29 @@ return (
         color: white;
         font-size: 20px;
     }
+    #BackButtonContainer {
+        display: flex;
+        position: absolute;
+        top: 25%;
+        left: 2%;
+    }
+    #BackButton {
+        font-size: 50px;
+        cursor: pointer;
+    }
+    #BackButton:hover {
+        opacity: 0.5;
+    }
     @media (max-width: 890px) {
         #TicketInfo {
-            height: 80vh;
+            height: 70vh;
         }
         #TicketInfoContainer {
             height: 80vh;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
         }
         #TicketInfoImageContainer {
             width: 80%;
@@ -150,29 +175,29 @@ return (
         }
         #TicketInfoTitle {
             color: green;
-            font-size: 17px;
-            margin-top: 4%;
+            font-size: 24px;
+            margin-top: 5%;
         }
         #TicketInfoSubTitle {
             font-size: 12px;
             margin-bottom: 5%;
         }
         #TicketInfoVenue {
-            font-size: 17px;
+            font-size: 18px;
         }
         #TicketInfoDate {
-            font-size: 12px;
+            font-size: 14px;
             margin-bottom: 5%;
         }
         #LocationIcon {
             color: green;
-            font-size: 12px;
+            font-size: 17px;
             margin-left: 3px;
             margin-right: 3px;
         }
         #TicketInfoAddress {
-            color: grey;
-            font-size: 10px;
+            color: #ccc;
+            font-size: 13px;
             cursor: pointer;
         }
         #TicketInfoOverviewContainer {
@@ -181,11 +206,15 @@ return (
             align-items: center;
         }
         #TicketInfoOverviewHeader {
-            font-size: 17px;
+            font-size: 24px;
         }
         #TicketInfoOverview {
             text-align: center;
             font-size: 12px;
+        }
+        #BackButtonContainer {
+            top: 20%;
+            left: 0;
         }
     `}
     </style>   

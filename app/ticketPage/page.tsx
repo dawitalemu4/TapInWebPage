@@ -18,6 +18,7 @@ export default function Home(){
       <Header />
       <TicketInfo />
       <Tickets />
+      <Socials />
       <Footer />
       
     </body>

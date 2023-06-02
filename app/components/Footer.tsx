@@ -11,21 +11,21 @@ return (
         
         <div id='FooterContainer'>
 
-        <div id='FooterTextContainer'>
-            <p id='FooterText'>
-                <a href='https://www.letsalltapin.com' target='blank' id='TermsLink'>Terms & Conditions</a> - <a href='https://www.letsalltapin.com' target='blank' id='PrivacyLink'>Privacy Policy</a>
-                <br/>
-                © 2023 Let's Tap In LLC. All Rights Reserved.
-            </p>
-        </div>
+            <div id='FooterTextContainer'>
+                <p id='FooterText'>
+                    <a href='https://www.letsalltapin.com' target='blank' id='TermsLink'>Terms & Conditions</a> - <a href='https://www.letsalltapin.com' target='blank' id='PrivacyLink'>Privacy Policy</a>
+                    <br/>
+                    © 2023 Let's Tap In LLC. All Rights Reserved.
+                </p>
+            </div>
 
-        <div id='FooterIconsContainer'>
-            <div id='Youtube'> <a href='https://www.youtube.com/channel/UCLSpAM-bqwWBf9lzRSBPKoQ' target='blank'> <SlSocialYoutube /> </a> </div>
-            <div id='Instagram'> <a href='https://www.instagram.com/lets_tapin/?hl=en' target='blank'> <RxInstagramLogo /> </a> </div>
-            <div id='Facebook'> <a href='https://www.facebook.com/LetsTapInApp/' target='blank'> <FiFacebook /> </a> </div>
-        </div>
+            <div id='FooterIconsContainer'>
+                <div id='Youtube'> <a href='https://www.youtube.com/channel/UCLSpAM-bqwWBf9lzRSBPKoQ' target='blank'> <SlSocialYoutube /> </a> </div>
+                <div id='Instagram'> <a href='https://www.instagram.com/lets_tapin/?hl=en' target='blank'> <RxInstagramLogo /> </a> </div>
+                <div id='Facebook'> <a href='https://www.facebook.com/LetsTapInApp/' target='blank'> <FiFacebook /> </a> </div>
+            </div>
 
-    </div>
+        </div>
     <style>
     {` 
     #Footer {

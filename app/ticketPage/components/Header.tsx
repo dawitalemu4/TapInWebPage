@@ -1,5 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import {FaBars} from 'react-icons/fa';
 import {FiFacebook} from 'react-icons/fi';
 import {RxInstagramLogo} from 'react-icons/rx';
 import {SlSocialYoutube} from 'react-icons/sl';
@@ -29,22 +31,19 @@ const Header: React.FC = () => {
 
     //used a function because I didn't want to put an <a> tag on an <img>
     const linkRedirect = () => {
-        window.location.href = '/';
+        window.location.href = 'https://letsalltapin.com';
       }
 
 return (
     <div id='Header'>
         
         <div id='HeaderContainer' className={scrolled ? 'scrolled' : ''}>
-            <div id='TicketHomeLogoContainer'>
-                <img src='/TicketHomeLogo.png' id='TicketHomeLogo' onClick={linkRedirect}/>
+            <div id='TicketPageLogoContainer'>
+                <img src='/Logo.png' id='TicketPageLogo' onClick={linkRedirect}/>
             </div>
-            <img
-            id="bars"
-            src="bars.jpg"
-            className={showMenu ? 'block' : 'hidden'}
-            onClick={() => setShowMenu(!showMenu)}
-            />
+
+            <div id="BarsContainer"> <Link href='/menu'> <FaBars id='Bars'/> </Link> </div>
+            
         <ul id='NavbarTextContainer' style={{ display: showMenu ? 'flex' : 'none' }}>
             <li id='App'> <a href='https://letsalltapin.com'> App</a></li>
             <li id='Events'><a href='https://letsalltapin.com'>Events</a></li>
@@ -88,17 +87,18 @@ return (
     #HeaderContainer.scrolled {
         width: 100%;
         padding: 0 2.5%;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 0.85);
     }
-    #TicketHomeLogoContainer {
+    #TicketPageLogoContainer {
         display: flex;
         width: 10%;
         height: 80%;
     }
-    #TicketHomeLogo {
+    #TicketPageLogo {
         border-radius: 5%;
+        padding: 5px;
     }
-    #TicketHomeLogo:hover {
+    #TicketPageLogo:hover {
         opacity: 0.5;
         cursor: pointer;
     }
@@ -136,24 +136,31 @@ return (
     }
 
     @media (max-width: 890px) {
-        #TicketHomeLogoContainer {
+        #TicketPageLogoContainer {
             width: 20%;
         }
-        #TicketHomeLogo {
+        #TicketPageLogo {
             width:70px;
             height: 70px;
         }
-        #bars {
-            cursor: pointer;
+        #BarsContainer {
             display: flex;
-            width: 70px;
-            height: 70px;
-            top: 1;
-            z-index: 4;
-          }
+            width: 20%;
+            height: 80%;
+            color: white;
+            justify-content: center;
+            align-items: center;
+        }
+        #Bars{
+            font-size: 50px;
+        }
+        #Bars:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
     }
     @media (min-width: 891px) {
-        #bars {
+        #BarsContainer {
           display: none;
         }
         #NavbarTextContainer, #HeaderIconsContainer {
