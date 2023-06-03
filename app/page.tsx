@@ -11,12 +11,11 @@ export const metadata: Metadata = {
 export default function Home(){
 
     return (
-      <html>
+    <html>
     <body>    
       <Header />
       <TicketCards />
-      <Footer />
-      
+      <Footer />  
     </body>
     </html>
     )

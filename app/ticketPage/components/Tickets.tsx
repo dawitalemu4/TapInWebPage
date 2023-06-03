@@ -1,7 +1,6 @@
 'use client'
 import React from 'react';
-import { AiOutlineMinusCircle } from 'react-icons/ai';
-import { AiOutlinePlusCircle } from 'react-icons/ai';
+import { AiOutlineMinusCircle, AiOutlinePlusCircle } from 'react-icons/ai';
 
 
 const Tickets: React.FC = () => {
@@ -87,7 +86,6 @@ return (
         position: relative;
         top: 0;
         left: 0;
-        margin-top: 5%;
         width: 100%;
         height: 65vh;
         background-color: transparent;
@@ -200,8 +198,7 @@ return (
     }
     @media (max-width: 890px) {
         #Tickets {
-            margin-top: 10%;
-            height: 35vh;
+            height: 45vh;
         }
         #TicketsHeaderContainer {
             width: 90%;

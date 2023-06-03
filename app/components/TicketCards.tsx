@@ -135,7 +135,7 @@ return (
     }
     #TicketCardsFiltersContainer {
         display: flex;
-        width: 400px;
+        width: 100%;
         padding: 2px 0;
         justify-content: flex-start;
     }
@@ -159,7 +159,7 @@ return (
     #TicketContainer {
         display: grid;
         position: relative;
-        width: 90%; 
+        width: 91%; 
         height: 80%;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         grid-gap: 20px;
@@ -172,7 +172,7 @@ return (
         display: flex;
         width: 250px;
         height: 350px;
-        margin: 10px;
+        margin: 1px;
         flex-direction: column;
         border-radius: 10px;
         justify-content: center;

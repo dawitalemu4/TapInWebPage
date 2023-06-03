@@ -1,9 +1,10 @@
 import { Metadata } from 'next';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import TicketInfo from './components/TicketInfo';
 import Tickets from './components/Tickets';
 import Socials from './components/Socials';
+import Overview from './components/Overview';
 
 export const metadata: Metadata = {
   title: "Ticket | Let's Tap In",
@@ -13,14 +14,14 @@ export const metadata: Metadata = {
 export default function Home(){
 
     return (
-      <html>
+    <html>
     <body>    
       <Header />
       <TicketInfo />
+      <Overview />
       <Tickets />
       <Socials />
       <Footer />
-      
     </body>
     </html>
     )

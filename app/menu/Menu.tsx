@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import React from 'react';
 import Link from 'next/link';
 import {FiFacebook} from 'react-icons/fi';
@@ -48,7 +48,7 @@ return (
     {`
         #Menu {
             display: flex;
-            posistion: relative;
+            position: relative;
             background-color: #E4E6E9;
             width: 100%;
             height: 100vh;
@@ -57,7 +57,7 @@ return (
         }
         #MenuHeaderContainer {
             display: flex;
-            posistion: relative;
+            position: relative;
             width: 100%;
             height: 15%;
             justify-content: center;
@@ -65,7 +65,7 @@ return (
         }
         #MenuLogoContainer {
             display: flex;
-            posistion: relative;
+            position: relative;
             width: 80%;
             height: 70%;
             justify-content: flex-start;
@@ -83,7 +83,7 @@ return (
         }
         #CancelContainer {
             display: flex;
-            posistion: relative;
+            position: relative;
             width: 10%;
             height: 90%;
             justify-content: center;
@@ -99,7 +99,7 @@ return (
         }
         #MenuContainer {
             display: flex;
-            posistion: relative;
+            position: relative;
             width: 90%;
             height: 70vh;
             justify-content: center;
@@ -137,6 +137,17 @@ return (
         #MenuYoutube, #MenuInstagram, #MenuFacebook {
             display: flex;
             font-size: 40px;
+        }
+        @media (max-width: 890px) {
+            #MenuHeaderContainer {
+                margin-top: 5%;
+            }
+            #CancelContainer {
+                width: 15%;
+            }
+            #MenuLogoContainer {
+                width: 75%;
+            }
         }
     `}
     </style>

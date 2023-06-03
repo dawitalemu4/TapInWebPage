@@ -92,7 +92,7 @@ return (
         padding-bottom: 2%;
     }
     #GalleryContainer::-webkit-scrollbar {
-        height: 0.7em;
+        height: 0.5em;
         background-color: #F5F5F5;
     }  
     #GalleryContainer::-webkit-scrollbar-thumb {
@@ -110,7 +110,8 @@ return (
     }
     @media (max-width: 890px) {
         #Socials {
-            height: 40vh;
+            margin-top: 5%;
+            height: 45vh;
         }
         #SocialsHeaderContainer {
             width: 90%;

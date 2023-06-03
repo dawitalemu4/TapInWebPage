@@ -38,10 +38,7 @@ return (
             
         </div>
 
-        <div id='TicketInfoOverviewContainer'>
-            <h1 id='TicketInfoOverviewHeader'>Overview</h1>
-            <p id='TicketInfoOverview'>Lorem ipsum dolor sit amet consectetur. Donec odio sit risus pulvinar odio ligula turpis scelerisque dignissim. Quis non duis fames purus. Quis quis rhoncus malesuada convallis purus consequat ac.Lorem ipsum dolor sit amet consectetur. Donec odio sit risus pulvinar odio ligula turpis scelerisque dignissim. Quis non duis fames purus. </p>
-        </div>
+        
 
     <style>
     {` 
@@ -52,7 +49,6 @@ return (
         left: 0;
         margin-top: 120px;
         width: 100%;
-        height: 100%;
         background-color: transparent;
         align-items: center;
         justify-content: flex-start;
@@ -123,27 +119,10 @@ return (
     #TicketInfoAddress:hover {
         opacity: 0.5;
     }
-    #TicketInfoOverviewContainer {
-        display: flex;
-        position: relative;
-        width: 70%;
-        font-family: PoppinsBold;
-        flex-direction: column;
-        margin-top: 5%;
-    }
-    #TicketInfoOverviewHeader {
-        color: green;
-        font-size: 34px;
-        margin-bottom: 1%;
-    }
-    #TicketInfoOverview {
-        color: white;
-        font-size: 20px;
-    }
     #BackButtonContainer {
         display: flex;
         position: absolute;
-        top: 25%;
+        top: 45%;
         left: 2%;
     }
     #BackButton {
@@ -153,12 +132,13 @@ return (
     #BackButton:hover {
         opacity: 0.5;
     }
-    @media (max-width: 890px) {
-        #TicketInfo {
-            height: 70vh;
+    @media (max-width: 970px) {
+        #BackButtonContainer {
+            left: 0;
         }
+    }
+    @media (max-width: 890px) {
         #TicketInfoContainer {
-            height: 80vh;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -200,22 +180,18 @@ return (
             font-size: 13px;
             cursor: pointer;
         }
-        #TicketInfoOverviewContainer {
-            width: 80%;
-            justify-content: center;
-            align-items: center;
-        }
-        #TicketInfoOverviewHeader {
-            font-size: 24px;
-        }
-        #TicketInfoOverview {
-            text-align: center;
-            font-size: 12px;
-        }
         #BackButtonContainer {
-            top: 20%;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            border: 1px solid red;
             left: 0;
         }
+        #BackButton {
+            position: absolute;
+            top: 26%;
+        }
+    }
     `}
     </style>   
             

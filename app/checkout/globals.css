@@ -2,17 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Page Styles */
-body{
-  display: flex;
-  position: relative;
-  background: url(/postcardBackground.jpg);
-  background-color: black;
-  background-size: cover;
-  background-repeat: no-repeat;
-  flex-direction: column;
-}
-
 
 body::-webkit-scrollbar {
   width: 0.2em;

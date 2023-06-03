@@ -93,6 +93,9 @@ return (
     #FooterTextContainer { 
         width: 100%;
     }
+    #FooterText {
+        font-size: 14px;
+    }
     }
     `}
     </style>   
