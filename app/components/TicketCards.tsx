@@ -8,9 +8,9 @@ const TicketCards: React.FC = () => {
     //idk how to write this until i get the backend params
 
     //function for Ticket cards to redirect to webpage with Ticket id
-    //same ^ for now ill do /ticketPage
+    //same ^ for now ill do /ticket
     const linkRedirect = () => {
-        window.location.href = '/ticketPage';
+        window.location.href = '/ticket';
     }
 
 return (

@@ -148,6 +148,10 @@ return (
             #MenuLogoContainer {
                 width: 75%;
             }
+            #MenuLogo {
+                height: 95%;
+                width: 30%;
+            }
         }
     `}
     </style>

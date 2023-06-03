@@ -122,7 +122,7 @@ return (
     #BackButtonContainer {
         display: flex;
         position: absolute;
-        top: 45%;
+        top: 0;
         left: 2%;
     }
     #BackButton {
@@ -183,13 +183,12 @@ return (
         #BackButtonContainer {
             position: absolute;
             top: 0;
-            height: 100%;
-            border: 1px solid red;
             left: 0;
+            height: 100%;
         }
         #BackButton {
             position: absolute;
-            top: 26%;
+            top: 25%;
         }
     }
     `}

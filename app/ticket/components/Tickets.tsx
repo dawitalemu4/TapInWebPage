@@ -7,7 +7,7 @@ const Tickets: React.FC = () => {
     
     //function to assign api variables to each div (prices, ticket names, etc.)
 
-    //function to make cart button show up when user clicks on a ticket
+    //function to add and subtract quantity amount according to Pluys and Minues
     
 return (
  <div id='Tickets'>
