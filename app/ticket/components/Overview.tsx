@@ -52,7 +52,7 @@ return (
         width: 0.2em;
     }
     #OverviewText::-webkit-scrollbar-thumb {
-        background-color: rgba(0,0,0,.2);
+        background-color: rgba(0, 0, 0, .2);
         border-radius: 90% / 3%;
     }
     #OverviewText {

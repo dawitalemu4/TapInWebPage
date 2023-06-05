@@ -150,7 +150,7 @@ return (
             }
             #MenuLogo {
                 height: 95%;
-                width: 30%;
+                width: 27%;
             }
         }
     `}

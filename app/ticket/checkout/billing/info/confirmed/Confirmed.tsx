@@ -1,30 +1,23 @@
 'use client'
-import React, {useState} from 'react';
+import React from 'react';
 import Link from 'next/link';
 import {IoIosArrowBack} from 'react-icons/io';
 
-const Info: React.FC = () => {
-
-    const [isChecked, setIsChecked] = useState(false);
-
-    const handleCheckboxChange = () => {
-        setIsChecked(!isChecked);
-    };
+const Confirmed: React.FC = () => {
 
     //function to navigate back wehen x is clicked
 
-    //function to pull info from 
+    //function to push confirmation to database and email service
 
-    
 
 return (
-    <div id='Info'>
+    <div id='Confirmed'>
 
-        <div id='InfoBackContainer'>
-            <Link href="/ticket/checkout/billing"><IoIosArrowBack id='InfoBack' /></Link>
+        <div id='ConfirmedBackContainer'>
+            <Link href="/ticket/checkout/billing"><IoIosArrowBack id='ConfirmedBack' /></Link>
         </div>
 
-        <div id='InfoContainer'>
+        <div id='ConfirmedContainer'>
 
             <div id='CheckoutInfoContainer'>
 
@@ -53,50 +46,27 @@ return (
 
             </div>
 
-            <div id="DisclaimerContainer">
-                <p id='DisclaimerText'>We request your email address in order to facilitate the delivery of your tickets.</p>
+            <div id="ConfirmationNumberContainer">
+                <p id='ConfirmationNumberText'>Your ticket confirmation number is #458</p>
             </div>
 
-            <div id='PersonalInfoContainer'>
- 
-                <div id='NameContainer'>
-
-                    <input id='FirstName' placeholder='First Name'/>        
-                    <input id='LastName' placeholder='Last Name'/>
-                    
-                </div>
-
-                <input id='Email' placeholder='Email'/>
-                    
+            <div id='EmailNoticeContainer'>
+                <p id='EmailNoticeText'>We have sent an email to the email address provided, which contains your electronic ticket for the upcoming event.</p>
             </div>
-
-            <div id='MarketingContainer'>
-
-                <div id='MarketingBoxContainer'>
-                    <label id='BoxLabel'>
-                    <input id='BoxInput' type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
-                    </label>
-                </div>
-
-                <div id='MarketingTextContainer'>
-                    <p id='MarketingText'>By selecting this checkbox, you are consenting to receive future marketing emails from us, which may include updates on upcoming events, special ticket prices, and other relevant information</p>
-                </div> 
-
-            </div>    
 
         </div>
 
-        <div id='InfoButtonContainer'>
+        <div id='ConfirmedButtonContainer'>
 
-            <Link href="/ticket/checkout/billing/info/confirmed" id='InfoButton'>
-                <h1 id='InfoButtonText'>Confirm Purchase</h1>
+            <Link href="/" id='ConfirmedButton'>
+                <h1 id='ConfirmedButtonText'>Go back to Events</h1>
             </Link>
 
         </div>
 
     <style>
     {`
-    #Info {
+    #Confirmed {
         display: flex;
         position: fixed;
         bottom: 0;
@@ -108,18 +78,18 @@ return (
         flex-direction: column;
         z-index: 10;
     }
-    #InfoBackContainer {
+    #ConfirmedBackContainer {
         display: flex;
         width: 5%;
         height: 15%;
         justify-content: center;
         align-items: center;
     }
-    #InfoBack {
+    #ConfirmedBack {
         color: white;
         font-size: 40px;
     }
-    #InfoContainer {
+    #ConfirmedContainer {
         display: flex;
         width: 100%;
         height: 66%; 
@@ -179,97 +149,42 @@ return (
         font-size: 17px;
         font-family: PoppinsSemiBold;
     }
-    #DisclaimerContainer {
+    #ConfirmationNumberContainer {
         display: flex;
         width: 95%;
-        height: 15%;
+        height: 35%;
         justify-content: center;
         align-items: center;
         text-align: center;
     }
-    #DisclaimerText {
+    #ConfirmationNumberText {
         color: white;
-        font-size: 15px;
-        font-family: PoppinsMedium;
+        font-size: 28px;
+        font-family: PoppinsBold;
     }
-    #PersonalInfoContainer {
+    #EmailNoticeContainer {
         display: flex;
-        width: 40%;
+        width: 70%;
+        height: 25%;
         margin-bottom: 1%;
         flex-direction: column;
-    }
-    #Email {
-        padding: 2%;
-        margin: 1%;
-        color: white;
-        background-color: black;
-        border-radius: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        font-family: PoppinsSemiBold;
-    }
-    #NameContainer {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-    }
-    #FirstName, #LastName {
-        width: 47%;
-        padding: 2%;
-        margin: 1%;
-        color: white;
-        background-color: black;
-        border-radius: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        font-family: PoppinsSemiBold;
-    }
-    #MarketingContainer {
-        display: flex;
-        width: 39%;
-        height: 33.5%;
-        flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        text-align: center;
     }
-    #MarketingBoxContainer {
-        display: flex;
-        width: 10%;
-        height: 30%;
-    }
-    #BoxLabel {
-        width: 100%;
-        height: 100%;
-    }
-    #BoxInput {
-       width: 100%;
-       height: 100%;
-    }
-    #MarketingTextContainer {
-        display: flex;
-        width: 85%;
-        height: 80%;
-        align-items: center;
-    }
-    #MarketingText {
+    #EmailNoticeText {
         color: white;
-        font-size: 15px;
-        font-family: PoppinsMedium;
-        overflow-y: scroll;
+        font-size: 20px;
+        font-family: PoppinsBold;
     }
-    #MarketingText::-webkit-scrollbar {
-        width: 0.2em;
-    }
-    #MarketingText::-webkit-scrollbar-thumb {
-        background-color: rgba(255, 255, 255, .2);
-        border-radius: 90% / 3%;
-    }
-    #InfoButtonContainer {
+    #ConfirmedButtonContainer {
         display: flex;
         width: 100%;
         height: 15%;
         justify-content: center;
         align-items: center;
     }
-    #InfoButton {
+    #ConfirmedButton {
         display: flex;
         width: 25%;
         height: 80%;
@@ -278,16 +193,16 @@ return (
         background-color: red;
         border-radius: 15% / 95%;
     }
-    #InfoButtonText {
+    #ConfirmedButtonText {
         color: white;
         font-size: 20px;
         font-family: PoppinsBold;
     }
-    #InfoButton:hover {
+    #ConfirmedButton:hover {
         opacity: 0.8;
     }
     @media (max-width: 890px) {
-        #InfoBackContainer {
+        #ConfirmedBackContainer {
             width: 15%;
         }
         #CheckoutInfoContainer {
@@ -297,19 +212,16 @@ return (
         #TicketIconContainer {
             width: 20%;
         }
-        #DisclaimerText {
-            font-size: 13px;
+        #ConfirmationNumberText {
+            font-size: 20px;
         }
-        #PersonalInfoContainer {
-            width: 95%;
+        #EmailNoticeContainer {
+            width: 90%;
         }
-        #MarketingContainer {
-            width: 95%;
+        #EmailNoticeText {
+            font-size: 15px;
         }
-        #MarketingText {
-            font-size: 13px;
-        }
-        #InfoButton {
+        #ConfirmedButton {
             width: 90%;
             height: 79.5%;
         }
@@ -319,4 +231,4 @@ return (
     </div>
 )
 }
-export default Info;
+export default Confirmed;

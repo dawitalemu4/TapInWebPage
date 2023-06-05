@@ -47,50 +47,50 @@ return (
 
             </div>
 
-                <div id='BillingInfoContainer'>
+            <div id='BillingInfoContainer'>
 
-                    <input id='BillingCardNumberInput' maxLength={16} type='password' placeholder='Card Number'/>
+                <input id='BillingCardNumberInput' maxLength={16} type='password' placeholder='Card Number'/>
                       
-                    <div id='MonthAndCVVContainer'>
+                <div id='MonthAndCVVContainer'>
 
-                        <input id='BillingMonthInput' placeholder='MM/YY'/>        
-                        <input id='BillingCVVInput' maxLength={3} type='password' placeholder='CVV'/>
+                    <input id='BillingMonthInput' placeholder='MM/YY'/>        
+                    <input id='BillingCVVInput' maxLength={3} type='password' placeholder='CVV'/>
                     
-                    </div>
-
-                    <input id='BillingZipInput' maxLength={5} placeholder='Zip Code'/>
-                    <input id='BillingPromoInput' placeholder='Promo Code'/>
-                
                 </div>
 
-                <div id='BillingTotalContainer'>
+                <input id='BillingZipInput' maxLength={5} placeholder='Zip Code'/>
+                <input id='BillingPromoInput' placeholder='Promo Code'/>
+                        
+            </div>    
 
-                    <div id='BillingTicketTotalContainer'>
-                        <div id='BillingTicketContainer'>
-                            <p id='BillingTicket'>Ticket</p>
-                        </div>
-                        <div id='BillingTicketPriceContainer'>
-                            <p id='BillingTicketPrice'>$9.00</p>
-                        </div>
-                    </div>
-                    <div id='BillingServiceContainer'>
-                        <div id='BillingServiceFeeContainer'>
-                            <p id='BillingServiceFee'>Service Fee</p>
-                        </div>
-                        <div id='BillingServicePriceContainer'>
-                            <p id='BillingServicePrice'>$10.00</p>
-                        </div>
-                    </div>
-                    <div id='BillingSubTotalContainer'>
-                        <div id='BillingSubTotalTextContainer'>
-                            <p id='BillingSubTotalText'>Subtotal</p>
-                        </div>
-                        <div id='BillingSubTotalPriceContainer'>
-                            <p id='BillingSubTotalPrice'>$21.00</p>
-                        </div>
-                    </div>
+            <div id='BillingTotalContainer'>
 
+                <div id='BillingTicketTotalContainer'>
+                    <div id='BillingTicketContainer'>
+                        <p id='BillingTicket'>Ticket</p>
+                    </div>
+                    <div id='BillingTicketPriceContainer'>
+                        <p id='BillingTicketPrice'>$9.00</p>
+                    </div>
                 </div>
+                <div id='BillingServiceContainer'>
+                    <div id='BillingServiceFeeContainer'>
+                        <p id='BillingServiceFee'>Service Fee</p>
+                    </div>
+                    <div id='BillingServicePriceContainer'>
+                        <p id='BillingServicePrice'>$10.00</p>
+                    </div>
+                </div>
+                <div id='BillingSubTotalContainer'>
+                    <div id='BillingSubTotalTextContainer'>
+                        <p id='BillingSubTotalText'>Subtotal</p>
+                    </div>
+                    <div id='BillingSubTotalPriceContainer'>
+                        <p id='BillingSubTotalPrice'>$21.00</p>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
 
@@ -148,6 +148,7 @@ return (
         display: flex;
         width: 13%;
         height: 70%;
+        margin-right: 3%;
     }
     #TicketIcon {
 
