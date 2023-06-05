@@ -39,7 +39,7 @@ return (
         
         <div id='HeaderContainer' className={scrolled ? 'scrolled' : ''}>
             <div id='TicketHomeLogoContainer'>
-                <img src='/Logo.png' id='TicketHomeLogo' onClick={linkRedirect}/>
+                <img src='/Logo.png' id='TicketHomeLogo' onClick={linkRedirect} alt='Lets Tap In Logo'/>
             </div>
 
             <div id="BarsContainer"> <Link href='/menu'> <FaBars id='Bars'/> </Link> </div>

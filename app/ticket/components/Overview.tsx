@@ -34,7 +34,7 @@ return (
         margin-top: 5%;
     }
     #OverviewHeader {
-        color: green;
+        color: #2EBC94;
         font-size: 34px;
         margin-bottom: 3%;
     }

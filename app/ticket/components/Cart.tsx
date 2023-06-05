@@ -37,7 +37,7 @@ return (
         width: 80px;
         height: 80px;
         border-radius: 50%;
-        background-color: green;
+        background-color: #2EBC94;
         justify-content: center;
         align-items: center;
         z-index: 10;
@@ -65,7 +65,7 @@ return (
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding-right: 1px;
+        padding-right: 2px;
     }
     #CartIcon {
         display: flex;

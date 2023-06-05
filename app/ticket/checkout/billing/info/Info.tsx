@@ -295,7 +295,12 @@ return (
             margin-bottom: 5%;
         }
         #TicketIconContainer {
-            width: 20%;
+            width: 20%;justify-content: flex-start;
+            align-items: center;
+        }
+        #TicketIcon {
+            width: 70%;
+            height: 90%;
         }
         #DisclaimerText {
             font-size: 13px;

@@ -87,7 +87,7 @@ return (
         flex-direction: column;
     }
     #TicketInfoTitle {
-        color: green;
+        color: #2EBC94;
         font-size: 34px;
     }
     #TicketInfoSubTitle {
@@ -106,13 +106,14 @@ return (
         flex-direction: row;
     }
     #LocationIcon {
-        color: green;
+        color: #2EBC94;
         font-size: 23px;
         margin-left: 3px;
         margin-right: 3px;
     }
     #TicketInfoAddress {
-        color: grey;
+        color: #ccc;
+        text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px 0.5px 0 black; 
         font-size: 17px;
         cursor: pointer;
     }
@@ -154,7 +155,7 @@ return (
             align-items: center;
         }
         #TicketInfoTitle {
-            color: green;
+            color: #2EBC94;
             font-size: 24px;
             margin-top: 5%;
         }
@@ -170,7 +171,7 @@ return (
             margin-bottom: 5%;
         }
         #LocationIcon {
-            color: green;
+            color: #2EBC94;
             font-size: 17px;
             margin-left: 3px;
             margin-right: 3px;

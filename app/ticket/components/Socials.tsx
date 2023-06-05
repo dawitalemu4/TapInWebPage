@@ -58,7 +58,7 @@ return (
         align-items: center;
     }
     #SocialsHeader {
-        color: green;
+        color: #2EBC94;
         font-size: 34px;
         font-family: PoppinsBold;
     }
@@ -100,7 +100,7 @@ return (
     }
     #GalleryContainer img {
         height: 100%;
-        border: 1px solid green;
+        border: 1px solid #2EBC94;
         border-radius: 20px;
         margin-right: 10px;
     }

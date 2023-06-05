@@ -100,7 +100,7 @@ return (
         align-items: center;
     }
     #TicketsHeader {
-        color: green;
+        color: #2EBC94;
         font-size: 34px;
         font-family: PoppinsBold;
     }
@@ -111,7 +111,7 @@ return (
         align-items: center;
         flex-direction: column;
         background-color: #4E4F5A;
-        border: 3px solid green;
+        border: 3px solid #2EBC94;
         border-radius: 20px;
     }
     #TicketOption1Container {

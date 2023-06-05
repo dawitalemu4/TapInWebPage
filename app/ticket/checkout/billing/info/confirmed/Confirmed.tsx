@@ -211,6 +211,12 @@ return (
         }
         #TicketIconContainer {
             width: 20%;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        #TicketIcon {
+            width: 70%;
+            height: 90%;
         }
         #ConfirmationNumberText {
             font-size: 20px;

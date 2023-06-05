@@ -156,9 +156,12 @@ return (
         }
         #TicketIconContainer {
             width: 15%;
+            justify-content: center;
+            align-items: center;
         }
         #TicketIcon {
-            transform: scale(0.8);
+            width: 95%;
+            height: 85%;
         }
         #CheckoutHeaderContainer, #CheckoutSubTextContainer {
             width: 90%;

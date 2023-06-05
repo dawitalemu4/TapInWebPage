@@ -28,69 +28,70 @@ return (
 
         <div id='TicketContainer'>
             <div id='Ticket' onClick={linkRedirect}>
-                <img src='/sampleTicketImage.jpg' id='TicketImage'/>
+                <img src='/sampleTicketImage.webp' id='TicketImage' alt='First Post Card Image'/>
                 <div id='TicketTextContainer'>
                     <div id='DateContainer'>
                         <p id='TicketDateTop'>FRI</p>
                         <p id='TicketDateBottom'>July 4</p>
                     </div>
                     <div id='TicketTitleContainer'>
-                        <p id='TicketTitle'>Title lorem ipsum idk</p>
+                        <p id='TicketTitle'>Title lorem ipsum</p>
                         <p id='TicketLocation'>SECU Mom's Basement</p>
                     </div>
                 </div>
             </div>
 
             <div id='Ticket' onClick={linkRedirect}>
-                <img src='/sampleTicketImage.jpg' id='TicketImage'/>
+                <img src='/sampleTicketImage2.webp' id='TicketImage' alt='Second Post Card Image'/>
                 <div id='TicketTextContainer'>
                     <div id='DateContainer'>
-                        <p id='TicketDateTop'>FRI</p>
+                        <p id='TicketDateTop'>MON</p>
                         <p id='TicketDateBottom'>July 4</p>
                     </div>
                     <div id='TicketTitleContainer'>
-                        <p id='TicketTitle'>Title lorem ipsum idk</p>
+                        <p id='TicketTitle'>Title lorem ipsum</p>
                         <p id='TicketLocation'>SECU Mom's Basement</p>
                     </div>
                 </div>
             </div>
 
             <div id='Ticket' onClick={linkRedirect}>
-                <img src='/sampleTicketImage.jpg' id='TicketImage'/>
+                <img src='/sampleTicketImage3.webp' id='TicketImage' alt='Third Post Card Image'/>
                 <div id='TicketTextContainer'>
                     <div id='DateContainer'>
-                        <p id='TicketDateTop'>FRI</p>
+                        <p id='TicketDateTop'>TUES</p>
                         <p id='TicketDateBottom'>July 4</p>
                     </div>
                     <div id='TicketTitleContainer'>
-                        <p id='TicketTitle'>Title lorem ipsum idk</p>
+                        <p id='TicketTitle'>Title lorem ipsum</p>
                         <p id='TicketLocation'>SECU Mom's Basement</p>
                     </div>
                 </div>
             </div>
 
             <div id='Ticket' onClick={linkRedirect}>
-                <img src='/sampleTicketImage.jpg' id='TicketImage'/>
+                <img src='/sampleTicketImage4.webp' id='TicketImage' alt='Fourth Post Card Image'/>
                 <div id='TicketTextContainer'>
                     <div id='DateContainer'>
-                        <p id='TicketDateTop'>FRI</p>
+                        <p id='TicketDateTop'>WED</p>
                         <p id='TicketDateBottom'>July 4</p>
                     </div>
                     <div id='TicketTitleContainer'>
-                        <p id='TicketTitle'>Title lorem ipsum idk</p>
+                        <p id='TicketTitle'>Title lorem ipsum</p>
                         <p id='TicketLocation'>SECU Mom's Basement</p>
                     </div>
                 </div>
             </div> 
+            
             <div id='Ticket' onClick={linkRedirect}>
-                <img src='/sampleTicketImage.jpg' id='TicketImage'/>
+                <img src='/sampleTicketImage5.webp' id='TicketImage' alt='Fifth Post Card Image'/>
                 <div id='TicketTextContainer'>
                     <div id='DateContainer'>
-                        <p id='TicketDateTop'>FRI</p>
+                        <p id='TicketDateTop'>THU</p>
                         <p id='TicketDateBottom'>July 4</p>
                     </div>
                     <div id='TicketTitleContainer'>
-                        <p id='TicketTitle'>Title lorem ipsum idk</p>
+                        <p id='TicketTitle'>Title lorem ipsum</p>
                         <p id='TicketLocation'>SECU Mom's Basement</p>
                     </div>
                 </div>
@@ -161,23 +162,24 @@ return (
         position: relative;
         width: 91%; 
         height: 80%;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
         grid-gap: 20px;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 30px;
     }
     #Ticket {
         display: flex;
-        width: 250px;
-        height: 350px;
+        position: relative;
+        height: 250px;
         margin: 1px;
         flex-direction: column;
         border-radius: 10px;
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        overflow: hidden;
     }
     #Ticket:hover {
         opacity: 0.8;
@@ -185,16 +187,20 @@ return (
     #TicketImage {
         display: flex;
         width: 100%;
-        border-radius: 10px 10px 0 0;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
     }
     #TicketTextContainer {
         display: flex;
+        position: absolute;
+        bottom: 0;
         width: 100%;
-        height: 16%;
+        height: 23%;
         align-items: center;
         flex-direction: row;
-        background-color: rgba(0, 0, 0, 0.7);
-        border-radius: 0 0 10px 10px;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+        border-radius: 10px;
     }
     #DateContainer {
         display: flex;
@@ -208,7 +214,7 @@ return (
     #TicketDateTop {
         font-family: PoppinsSemiBold;
         color: white;
-        font-size: 155%;
+        font-size: 140%;
         margin-bottom: -5px;
         margin-top: -5px;
     } 
@@ -240,10 +246,10 @@ return (
         }
         #Ticket {
             width: 165px;
-            height: 200px;
+            height: 160px;
         }
         #TicketDateTop {
-            font-size: 95%;
+            font-size: 90%;
         }
         #TicketDateBottom {
             font-size: 55%;
