@@ -113,9 +113,9 @@ return (
     }
     #TicketInfoAddress {
         color: #ccc;
-        text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px 0.5px 0 black; 
         font-size: 17px;
         cursor: pointer;
+        font-family: PoppinsSemibold;
     }
     #TicketInfoAddress:hover {
         opacity: 0.5;

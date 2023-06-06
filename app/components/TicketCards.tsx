@@ -36,7 +36,7 @@ return (
                     </div>
                     <div id='TicketTitleContainer'>
                         <p id='TicketTitle'>Title lorem ipsum</p>
-                        <p id='TicketLocation'>SECU Mom's Basement</p>
+                        <p id='TicketLocation'>SECU Arena F2</p>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@ return (
                     </div>
                     <div id='TicketTitleContainer'>
                         <p id='TicketTitle'>Title lorem ipsum</p>
-                        <p id='TicketLocation'>SECU Mom's Basement</p>
+                        <p id='TicketLocation'>SECU Arena F2</p>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@ return (
                     </div>
                     <div id='TicketTitleContainer'>
                         <p id='TicketTitle'>Title lorem ipsum</p>
-                        <p id='TicketLocation'>SECU Mom's Basement</p>
+                        <p id='TicketLocation'>SECU Arena F2</p>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@ return (
                     </div>
                     <div id='TicketTitleContainer'>
                         <p id='TicketTitle'>Title lorem ipsum</p>
-                        <p id='TicketLocation'>SECU Mom's Basement</p>
+                        <p id='TicketLocation'>SECU Arena F2</p>
                     </div>
                 </div>
             </div> 
@@ -92,7 +92,7 @@ return (
                     </div>
                     <div id='TicketTitleContainer'>
                         <p id='TicketTitle'>Title lorem ipsum</p>
-                        <p id='TicketLocation'>SECU Mom's Basement</p>
+                        <p id='TicketLocation'>SECU Arena F2</p>
                     </div>
                 </div>
             </div>   
@@ -162,16 +162,18 @@ return (
         position: relative;
         width: 91%; 
         height: 80%;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
         grid-gap: 20px;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         margin-top: 30px;
+        z-index: 5;
     }
     #Ticket {
         display: flex;
         position: relative;
+        width: 230px;
         height: 250px;
         margin: 1px;
         flex-direction: column;
@@ -199,12 +201,12 @@ return (
         height: 23%;
         align-items: center;
         flex-direction: row;
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
         border-radius: 10px;
     }
     #DateContainer {
         display: flex;
-        width: 25%;
+        width: 30%;
         height: 80%;
         justify-content: center;
         align-items: center;
@@ -226,7 +228,7 @@ return (
     #TicketTitleContainer {
         display: flex;
         width: 70%;
-        padding-left: 5%;
+        padding-left: 2%;
         justify-content: center;
         flex-direction: column;
     }
@@ -238,7 +240,7 @@ return (
     #TicketLocation {
         font-family: PoppinsMedium;
         color: white;
-        font-size: 85%;
+        font-size: 75%;
     }
     @media (max-width: 890px) {
         #TicketContainer {
@@ -246,7 +248,7 @@ return (
         }
         #Ticket {
             width: 165px;
-            height: 160px;
+            height: 180px;
         }
         #TicketDateTop {
             font-size: 90%;

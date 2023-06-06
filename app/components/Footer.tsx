@@ -36,7 +36,7 @@ return (
         width: 100%;
         height: 160px;
         background-color: transparent;
-        z-index: 5;
+        z-index: 3;
         align-items: center;
         justify-content: center;
     }

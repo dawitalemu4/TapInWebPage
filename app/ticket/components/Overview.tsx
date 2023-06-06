@@ -29,19 +29,19 @@ return (
         position: relative;
         width: 70%;
         height: 70%;
-        font-family: PoppinsBold;
         flex-direction: column;
         margin-top: 5%;
-    }
-    #OverviewHeader {
-        color: #2EBC94;
-        font-size: 34px;
-        margin-bottom: 3%;
     }
     #OverviewHeaderContainer {
         display: flex;
         position: relative;
         width: 70%;
+    }
+    #OverviewHeader {
+        color: #2EBC94;
+        font-size: 34px;
+        margin-bottom: 3%;
+        font-family: PoppinsBold;
     }
     #OverviewTextContainer {
         display: flex;
@@ -62,6 +62,7 @@ return (
         font-size: 20px;
         height: 150px;
         overflow-y: scroll;
+        font-family: PoppinsMedium;
     }
     @media (max-width: 890px) {
         #OverviewContainer {
