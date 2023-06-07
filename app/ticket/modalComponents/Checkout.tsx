@@ -1,19 +1,23 @@
 'use client'
 import React from 'react';
-import Link from 'next/link';
 import {VscClose} from 'react-icons/vsc';
 
-const Checkout: React.FC = () => {
+interface CheckoutProps {
+    onNext: () => void;
+    onPrevious: () => void;
+  }
+
+const Checkout: React.FC<CheckoutProps> = ({ onNext, onPrevious }) => {
 
     //function to navigate back wehen x is clicked
 
-    //function to pull info from 
+    //function to pull info from
 
 return (
     <div id='Checkout'>
 
         <div id='CheckoutCancelContainer'>
-            <Link href="/ticket"><VscClose id='CheckoutCancel' /></Link>
+            <button onClick={onPrevious}><VscClose id='CheckoutCancel' /></button>
         </div>
 
         <div id='CheckoutContainer'>
@@ -43,9 +47,9 @@ return (
 
         <div id='CheckoutButtonContainer'>
 
-            <Link href="/ticket/checkout/billing" id='CheckoutButton'>
+            <button onClick={onNext} id='CheckoutButton'>
                 <h1 id='CheckoutButtonText'>Checkout</h1>
-            </Link>
+            </button>
 
         </div>
 
@@ -136,7 +140,7 @@ return (
         height: 80%;
         justify-content: center;
         align-items: center;
-        background-color: red;
+        background-color: #2EBC94;
         border-radius: 15% / 95%;
     }
     #CheckoutButtonText {

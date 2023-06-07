@@ -1,9 +1,13 @@
 'use client'
 import React, {useState} from 'react';
-import Link from 'next/link';
 import {IoIosArrowBack} from 'react-icons/io';
 
-const Info: React.FC = () => {
+interface InfoProps {
+    onPrevious: () => void;
+    onNext: () => void;
+  }
+
+const Info: React.FC<InfoProps> = ({ onPrevious, onNext }) => {
 
     const [isChecked, setIsChecked] = useState(false);
 
@@ -15,13 +19,39 @@ const Info: React.FC = () => {
 
     //function to pull info from 
 
+    const [firstName, setName] = useState('');
+    const [lastName, setlastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [showWarning, setShowWarning] = useState(false);
+  
+    const validateForm = () => {
+        if (firstName === '' || lastName === '' || email === '') {
+          setShowWarning(true);
+          setTimeout(() => {
+            setShowWarning(false);
+          }, 3000); 
+        } else {
+          onNext();
+        }
+      };
+
+    const handleFirstNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setName(event.target.value);
+      };
     
+      const handleLastNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setlastName(event.target.value);
+      };
+    
+      const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(event.target.value);
+      };
 
 return (
     <div id='Info'>
 
         <div id='InfoBackContainer'>
-            <Link href="/ticket/checkout/billing"><IoIosArrowBack id='InfoBack' /></Link>
+            <button onClick={onPrevious}><IoIosArrowBack id='InfoBack' /></button>
         </div>
 
         <div id='InfoContainer'>
@@ -61,12 +91,12 @@ return (
  
                 <div id='NameContainer'>
 
-                    <input id='FirstName' placeholder='First Name'/>        
-                    <input id='LastName' placeholder='Last Name'/>
+                    <input id='FirstName' placeholder='First Name' value={firstName} onChange={handleFirstNameChange}/>        
+                    <input id='LastName' placeholder='Last Name' value={lastName} onChange={handleLastNameChange}/>
                     
                 </div>
 
-                <input id='Email' placeholder='Email'/>
+                <input id='Email' placeholder='Email' value={email} onChange={handleEmailChange}/>
                     
             </div>
 
@@ -88,9 +118,14 @@ return (
 
         <div id='InfoButtonContainer'>
 
-            <Link href="/ticket/checkout/billing/info/confirmed" id='InfoButton'>
+            {showWarning && (
+            <p id='Warning' style={{ display: 'flex', color: 'red' }}>
+            Please Fill Out All Fields</p>
+            )}
+
+            <button id='InfoButton' onClick={validateForm}>
                 <h1 id='InfoButtonText'>Confirm Purchase</h1>
-            </Link>
+            </button>
 
         </div>
 
@@ -269,13 +304,18 @@ return (
         justify-content: center;
         align-items: center;
     }
+    #Warning {
+        position: absolute;
+        bottom: 18%;
+        font-family: PoppinsBold;
+    }
     #InfoButton {
         display: flex;
         width: 25%;
         height: 80%;
         justify-content: center;
         align-items: center;
-        background-color: red;
+        background-color: #2EBC94;
         border-radius: 15% / 95%;
     }
     #InfoButtonText {

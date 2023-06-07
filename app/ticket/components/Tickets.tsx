@@ -1,13 +1,79 @@
 'use client'
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from 'react-icons/ai';
 
+interface TicketsProps {
+    onNext: () => void;
+    onPrevious: () => void;
+    onQuantityChange: (sum: number) => void;
+  }
 
-const Tickets: React.FC = () => {
+const Tickets: React.FC<TicketsProps> = ({ onNext, onPrevious, onQuantityChange }) => {
+
+
+  const [quantity1, setQuantity1] = useState(0);
+  const [quantity2, setQuantity2] = useState(0);
+  const [quantity3, setQuantity3] = useState(0);
+  const [quantity4, setQuantity4] = useState(0);
+
+  const addQuantity1 = () => {
+    setQuantity1(quantity1 + 1);
+  };
+
+  const subtractQuantity1 = () => {
+    if (quantity1 > 0) {
+      setQuantity1(quantity1 - 1);
+    }
+  };
+
+  const addQuantity2 = () => {
+    setQuantity2(quantity2 + 1);
+  };
+
+  const subtractQuantity2 = () => {
+    if (quantity2 > 0) {
+      setQuantity2(quantity2 - 1);
+    }
+  };
+
+  const addQuantity3 = () => {
+    setQuantity3(quantity3 + 1);
+  };
+
+  const subtractQuantity3 = () => {
+    if (quantity3 > 0) {
+      setQuantity3(quantity3 - 1);
+    }
+  };
+
+  const addQuantity4 = () => {
+    setQuantity4(quantity4 + 1);
+  };
+
+  const subtractQuantity4 = () => {
+    if (quantity4 > 0) {
+      setQuantity4(quantity4 - 1);
+    }
+  };
+
+  const quantitySum = () => {
+    const sum = quantity1 + quantity2 + quantity3 + quantity4;
+    if (sum === 0) {
+      onPrevious();
+    } else {
+      onNext();
+    }
+    return sum;
+  };
+
+    useEffect(() => {
+        const sum = quantitySum();
+        onQuantityChange(sum);
+      }, [quantity1, quantity2, quantity3, quantity4]);
     
+      
+  
     //function to assign api variables to each div (prices, ticket names, etc.)
-
-    //function to add and subtract quantity amount according to Pluys and Minues
     
 return (
  <div id='Tickets'>
@@ -27,9 +93,9 @@ return (
                 <p id='TicketTypeText'>General Admission Ticket </p>
             </div>
             <div id='QuantityContainer'>
-                <div id='Minus'><AiOutlineMinusCircle/></div>
-                <h2 id='QuantityAmount'>0</h2>
-                <div id='Plus'><AiOutlinePlusCircle/></div>
+                <button id='Minus'><AiOutlineMinusCircle onClick={subtractQuantity1}/></button>
+                <h2 id='QuantityAmount'>{quantity1}</h2>
+                <button id='Plus'><AiOutlinePlusCircle onClick={addQuantity1}/></button>
             </div>
         </div>
 
@@ -42,9 +108,9 @@ return (
                 <p id='TicketTypeText'>General Admission Ticket </p>
             </div>
             <div id='QuantityContainer'>
-                <div id='Minus'><AiOutlineMinusCircle/></div>
-                <h2 id='QuantityAmount'>0</h2>
-                <div id='Plus'><AiOutlinePlusCircle/></div>       
+                <button id='Minus'><AiOutlineMinusCircle onClick={subtractQuantity2}/></button>
+                <h2 id='QuantityAmount'>{quantity2}</h2>
+                <button id='Plus'><AiOutlinePlusCircle onClick={addQuantity2}/></button>      
             </div>
         </div>
 
@@ -57,9 +123,9 @@ return (
                 <p id='TicketTypeText'>General Admission Ticket </p>
             </div>
             <div id='QuantityContainer'>
-                <div id='Minus'><AiOutlineMinusCircle/></div>
-                <h2 id='QuantityAmount'>0</h2>
-                <div id='Plus'><AiOutlinePlusCircle/></div>       
+                <button id='Minus'><AiOutlineMinusCircle onClick={subtractQuantity3}/></button>
+                <h2 id='QuantityAmount'>{quantity3}</h2>
+                <button id='Plus'><AiOutlinePlusCircle onClick={addQuantity3}/></button>       
             </div>
         </div>
 
@@ -72,9 +138,9 @@ return (
                 <p id='TicketTypeText'>General Admission Ticket </p>
             </div>
             <div id='QuantityContainer'>
-                <div id='Minus'><AiOutlineMinusCircle/></div>
-                <h2 id='QuantityAmount'>0</h2>
-                <div id='Plus'><AiOutlinePlusCircle/></div>
+                <button id='Minus'><AiOutlineMinusCircle onClick={subtractQuantity4}/></button>
+                <h2 id='QuantityAmount'>{quantity4}</h2>
+                <button id='Plus'><AiOutlinePlusCircle onClick={addQuantity4}/></button>
             </div>
         </div>
 
@@ -193,9 +259,6 @@ return (
         font-size: 34px;
         cursor: pointer;
     }
-    #Minus:hover, #Plus:hover {
-        opacity: 0.5;
-    }
     @media (max-width: 890px) {
         #Tickets {
             height: 45vh;
@@ -225,7 +288,6 @@ return (
     }
     `}
     </style>
-
     </div>
     )
 }

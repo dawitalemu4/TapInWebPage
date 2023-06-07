@@ -1,30 +1,23 @@
 'use client'
-import React, {useMemo} from 'react';
-import Link from 'next/link';
+import React from 'react';
 import {AiOutlineShoppingCart} from 'react-icons/ai';
-import Tickets from './Tickets';
 
-const Cart: React.FC = () => {
+interface CartProps {
+    onNext: () => void;
+    sum: number;
+  }
 
-    //function to match CartText number QuantityAmount from Tickets.tsx
-
-    //function to make cart button hidden unless QuantityAmount is over 0 
-
-    //function to redirect to checkout page when cart button is clicked
-    const checkoutRedirect = () => {
-        window.location.href = '/ticket/checkout';
-    }
-    //i know its redudant because of the link tag below my bad 
+const Cart: React.FC<CartProps> = ({ onNext, sum }) => {
     
 return (
-    <div id='Cart' onClick={checkoutRedirect}>
+    <div id='Cart' onClick={onNext}>
 
         <div id='CartTextContainer'>
-            <h1 id='CartText'>1</h1>
+            <h1 id='CartText'>{sum}</h1>
         </div>
 
         <div id='CartContainer'>
-            <Link href="/ticket/checkout"><AiOutlineShoppingCart id='CartIcon' /></Link>
+            <button onClick={onNext}><AiOutlineShoppingCart id='CartIcon' /></button>
         </div>
 
     <style>
@@ -58,6 +51,7 @@ return (
     #CartText {
         color: white;
         font-family: PoppinsBold;
+        padding-left: 1.5px;
     }
     #CartContainer {
         display: flex;
@@ -71,6 +65,11 @@ return (
         display: flex;
         font-size: 45px;
         color: white;
+    }
+    @media (max-width: 400px) {
+        #CartTextContainer {
+            padding-left: 0;
+        }
     }
     `}
     </style>

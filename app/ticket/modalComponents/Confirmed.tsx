@@ -1,9 +1,13 @@
 'use client'
 import React from 'react';
-import Link from 'next/link';
 import {IoIosArrowBack} from 'react-icons/io';
 
-const Confirmed: React.FC = () => {
+interface ConfirmedProps {
+    onPrevious: () => void;
+    onNext: () => void;
+  }
+
+const Confirmed: React.FC<ConfirmedProps> = ({ onPrevious, onNext }) => {
 
     //function to navigate back wehen x is clicked
 
@@ -14,7 +18,7 @@ return (
     <div id='Confirmed'>
 
         <div id='ConfirmedBackContainer'>
-            <Link href="/ticket/checkout/billing"><IoIosArrowBack id='ConfirmedBack' /></Link>
+            <button onClick={onPrevious}><IoIosArrowBack id='ConfirmedBack' /></button>
         </div>
 
         <div id='ConfirmedContainer'>
@@ -58,9 +62,9 @@ return (
 
         <div id='ConfirmedButtonContainer'>
 
-            <Link href="/" id='ConfirmedButton'>
-                <h1 id='ConfirmedButtonText'>Go back to Events</h1>
-            </Link>
+            <button onClick={onNext} id='ConfirmedButton'>
+                <h1 id='ConfirmedButtonText'>Go back to Ticket</h1>
+            </button>
 
         </div>
 
@@ -190,7 +194,7 @@ return (
         height: 80%;
         justify-content: center;
         align-items: center;
-        background-color: red;
+        background-color: #2EBC94;
         border-radius: 15% / 95%;
     }
     #ConfirmedButtonText {

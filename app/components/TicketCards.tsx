@@ -1,9 +1,21 @@
 'use client'
-import React from 'react';
-
+import React, {useState} from 'react';
 
 const TicketCards: React.FC = () => {
-    
+
+    const [All, setAll] = useState(true);
+    const [Today, setToday] = useState(false);
+
+    const handleAllClick = () => {
+        setAll(true);
+        setToday(false);
+      };
+
+    const handleTodayClick = () => {
+        setAll(false);
+        setToday(true);
+      };
+
     //function for filter buttons
     //idk how to write this until i get the backend params
 
@@ -21,8 +33,8 @@ return (
                 <p id='TicketCardsText'>Events</p>
             </div>
             <div id='TicketCardsFiltersContainer'>
-                <button id='All'>All</button>
-                <button id='Today'>Today</button>
+                <button id='All' onClick={handleAllClick} className={All ? 'active' : ''}>All</button>
+                <button id='Today' onClick={handleTodayClick} className={Today ? 'active' : ''}>Today</button>
             </div>
         </div>
 
@@ -140,6 +152,9 @@ return (
         padding: 2px 0;
         justify-content: flex-start;
     }
+    #TicketCardsFiltersContainer button.active {
+        border: 3px solid #497CFF;
+    }
     #All, #Today {
         font-family: PoppinsSemiBold;
         color: white;
@@ -152,9 +167,6 @@ return (
         margin-right: 10px;
         border-radius: 40% / 90%;
         border: 2px solid grey;
-    }
-    #All:hover, #Today:hover {
-        opacity: 0.5;
         cursor: pointer;
     }
     #TicketContainer {
@@ -198,10 +210,10 @@ return (
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 23%;
+        height: 22%;
         align-items: center;
         flex-direction: row;
-        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
+        background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 1));
         border-radius: 10px;
     }
     #DateContainer {
@@ -251,16 +263,16 @@ return (
             height: 180px;
         }
         #TicketDateTop {
-            font-size: 90%;
+            font-size: 105%;
         }
         #TicketDateBottom {
-            font-size: 55%;
+            font-size: 65%;
         }
         #TicketTitle {
-            font-size: 60%;
+            font-size: 70%;
         }
         #TicketLocation {
-            font-size: 50%;
+            font-size: 60%;
         }
     }
     `}

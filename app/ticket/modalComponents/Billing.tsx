@@ -1,21 +1,79 @@
 'use client'
 import React, {useState} from 'react';
-import Link from 'next/link';
 import {IoIosArrowBack} from 'react-icons/io';
 
-const Billing: React.FC = () => {
+interface BillingProps {
+    onNext: () => void;
+    onPrevious: () => void;
+  }
+
+  const Billing: React.FC<BillingProps> = ({ onNext, onPrevious }) => {
 
     //function to navigate back wehen x is clicked
 
     //function to pull info from 
 
+    const [cardNumber, setCardNumber] = useState('');
+    const [month, setMonth] = useState('');
+    const [cvv, setCVV] = useState('');
+    const [zip, setZip] = useState('');
+    const [promo, setPromo] = useState('');
+    const [showWarning, setShowWarning] = useState(false);
+  
+    const validateForm = () => {
+        if (cardNumber === '' || month === '' || cvv === '' || zip === '') {
+          setShowWarning(true);
+          setTimeout(() => {
+            setShowWarning(false);
+          }, 3000); 
+        } else {
+          onNext();
+        }
+      };
+
+    const handleCardNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const inputCardNumber = event.target.value;
+        const formattedCardNumber = inputCardNumber.replace(/\s/g, '').replace(/(\d{4})/g, '$1 ');
+
+        setCardNumber(formattedCardNumber.trim());
+    };
+
+    const handleMonthChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const { value } = event.target;
+      let formattedValue = value;
+
+      if (value.length === 2 && !value.includes("/")) {
+        formattedValue = `${value}/`;
+      }
+
+      setMonth(formattedValue);
+    };
+
+    const handleCVVChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setCVV(event.target.value);
+    };
+
+    const handleZipChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setZip(event.target.value);
+    };
+
+    const handlePromoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setPromo(event.target.value);
+    };
+
+    const numberOnly = (event: React.KeyboardEvent<HTMLInputElement>) => {
+      if (event.key !== "Backspace" && isNaN(Number(event.key))) {
+        event.preventDefault();
+      }
+    };  
     
+
 
 return (
     <div id='Billing'>
 
         <div id='BillingBackContainer'>
-            <Link href="/ticket/checkout"><IoIosArrowBack id='BillingBack' /></Link>
+            <button onClick={onPrevious}><IoIosArrowBack id='BillingBack' /></button>
         </div>
 
         <div id='BillingContainer'>
@@ -49,17 +107,25 @@ return (
 
             <div id='BillingInfoContainer'>
 
-                <input id='BillingCardNumberInput' maxLength={16} type='password' placeholder='Card Number'/>
+                <input id='BillingCardNumberInput' required maxLength={19} 
+                placeholder='Card Number' value={cardNumber} onChange={handleCardNumberChange}
+                onKeyDown={numberOnly}/>
                       
                 <div id='MonthAndCVVContainer'>
 
-                    <input id='BillingMonthInput' placeholder='MM/YY'/>        
-                    <input id='BillingCVVInput' maxLength={3} type='password' placeholder='CVV'/>
+                    <input id='BillingMonthInput' required placeholder='MM/YY' maxLength={5}
+                    value={month} onChange={handleMonthChange} onKeyDown={numberOnly}/>
+
+                    <input id='BillingCVVInput' required maxLength={3} type='password' 
+                    value={cvv} onChange={handleCVVChange} placeholder='CVV' onKeyDown={numberOnly}/>
                     
                 </div>
 
-                <input id='BillingZipInput' maxLength={5} placeholder='Zip Code'/>
-                <input id='BillingPromoInput' placeholder='Promo Code'/>
+                <input id='BillingZipInput' required maxLength={5} placeholder='Zip Code'
+                value={zip} onChange={handleZipChange} onKeyDown={numberOnly}/>
+
+                <input id='BillingPromoInput' placeholder='Promo Code'
+                value={promo} onChange={handlePromoChange} onKeyDown={numberOnly}/>
                         
             </div>    
 
@@ -96,9 +162,14 @@ return (
 
         <div id='BillingButtonContainer'>
 
-            <Link href="/ticket/checkout/billing/info" id='BillingButton'>
+            {showWarning && (
+            <p id='Warning' style={{ display: 'flex', color: 'red' }}>
+            Please Fill Out All Fields</p>
+            )}
+
+            <button id='BillingButton' onClick={validateForm}>
                 <h1 id='BillingButtonText'>Next</h1>
-            </Link>
+            </button>
 
         </div>
 
@@ -254,13 +325,19 @@ return (
         justify-content: center;
         align-items: center;
     }
+    #Warning {
+        position: absolute;
+        bottom: 18%;
+        font-family: PoppinsBold;
+        transition: 1s ease-in-out;
+    }
     #BillingButton {
         display: flex;
         width: 25%;
         height: 80%;
         justify-content: center;
         align-items: center;
-        background-color: red;
+        background-color: #2EBC94;
         border-radius: 15% / 95%;
     }
     #BillingButtonText {
