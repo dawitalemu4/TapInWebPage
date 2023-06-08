@@ -32,6 +32,7 @@ return (
 
           return (
             <div>
+              <img src={imgSrc} alt="test" style={{ width: 300 }}/>
             </div>
           );
         }}

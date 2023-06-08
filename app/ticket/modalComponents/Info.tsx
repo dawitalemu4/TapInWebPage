@@ -23,9 +23,14 @@ const Info: React.FC<InfoProps> = ({ onPrevious, onNext }) => {
     const [lastName, setlastName] = useState('');
     const [email, setEmail] = useState('');
     const [showWarning, setShowWarning] = useState(false);
+
+    const validateEmail = (email: string) => {
+        const regex = /.*@.*\..*/;
+        return regex.test(email);
+      };
   
     const validateForm = () => {
-        if (firstName === '' || lastName === '' || email === '') {
+        if (firstName === '' || lastName === '' || email === '' || !validateEmail(email)) {
           setShowWarning(true);
           setTimeout(() => {
             setShowWarning(false);
@@ -357,6 +362,9 @@ return (
         #InfoButton {
             width: 90%;
             height: 79.5%;
+        }
+        #Warning {
+            font-size: 13px;
         }
     }
     `}

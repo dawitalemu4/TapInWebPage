@@ -125,7 +125,7 @@ return (
                 value={zip} onChange={handleZipChange} onKeyDown={numberOnly}/>
 
                 <input id='BillingPromoInput' placeholder='Promo Code'
-                value={promo} onChange={handlePromoChange} onKeyDown={numberOnly}/>
+                value={promo} onChange={handlePromoChange}/>
                         
             </div>    
 
@@ -373,6 +373,9 @@ return (
         #BillingButton {
             width: 90%;
             height: 79.5%;
+        }
+        #Warning {
+            font-size: 15px;
         }
     }
     `}

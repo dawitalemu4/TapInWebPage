@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+body {
+  background: none;
+  background-color: none;
+}
 
 body::-webkit-scrollbar {
   width: 0.2em;

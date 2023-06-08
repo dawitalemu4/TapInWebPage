@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react';
 import Tickets from './Tickets';
-import Cart from './Cart';
+import Cart from '../modalComponents/Cart';
 import Checkout from '../modalComponents/Checkout';
 import Billing from '../modalComponents/Billing';
 import Info from '../modalComponents/Info';

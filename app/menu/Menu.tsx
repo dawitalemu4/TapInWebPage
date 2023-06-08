@@ -1,6 +1,5 @@
 'use client'
 import React from 'react';
-import Link from 'next/link';
 import {FiFacebook} from 'react-icons/fi';
 import {RxInstagramLogo} from 'react-icons/rx';
 import {SlSocialYoutube} from 'react-icons/sl';
@@ -23,7 +22,7 @@ return (
             </div>
 
             <div id='CancelContainer'>
-                <Link href="/"><GiCancel id='Cancel' /></Link>
+                <a href="/"><GiCancel id='Cancel' /></a>
             </div>
 
         </div>
