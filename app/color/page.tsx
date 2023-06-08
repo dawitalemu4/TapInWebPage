@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
-import Background from './Background';
-import Overview from './Test';
+import Color from './Color';
 
 export const metadata: Metadata = {
   title: "Events | Let's Tap In",
@@ -12,8 +11,7 @@ export default function Home(){
     return (
     <html>
     <body>
-      <Background />  
-      <Overview />
+      <Color />
     </body>
     </html>
     )

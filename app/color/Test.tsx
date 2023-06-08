@@ -1,8 +1,13 @@
 'use client'
 import React from 'react';
 
-const Overview: React.FC = () => {
+interface TestProps {
+    BackgroundColor: string;
+    AccentColor: string;
+}
 
+const Test: React.FC<TestProps> = ({ BackgroundColor, AccentColor }) => {
+ 
 return (
 
     <div id='Overview'>
@@ -17,6 +22,10 @@ return (
         </div>
     <style>
     {`
+    :root {
+        --BackgroundColor: ${BackgroundColor};
+        --AccentColor: ${AccentColor};
+    }
     #Overview {
         display: flex;
         position: relative;
@@ -38,7 +47,7 @@ return (
         width: 70%;
     }
     #OverviewHeader {
-        color: #2EBC94;
+        color: var(--AccentColor);
         font-size: 34px;
         margin-bottom: 3%;
         font-family: PoppinsBold;
@@ -88,4 +97,4 @@ return (
     </div>
 )
 }
-export default Overview;
+export default Test;
