@@ -107,7 +107,147 @@ return (
                         <p id='TicketLocation'>SECU Arena F2</p>
                     </div>
                 </div>
-            </div>   
+            </div>
+
+            <div id='Ticket' onClick={linkRedirect}>
+                <img src='/sampleTicketImage.webp' id='TicketImage' alt='First Post Card Image'/>
+                <div id='TicketTextContainer'>
+                    <div id='DateContainer'>
+                        <p id='TicketDateTop'>FRI</p>
+                        <p id='TicketDateBottom'>July 4</p>
+                    </div>
+                    <div id='TicketTitleContainer'>
+                        <p id='TicketTitle'>Title lorem ipsum</p>
+                        <p id='TicketLocation'>SECU Arena F2</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id='Ticket' onClick={linkRedirect}>
+                <img src='/sampleTicketImage2.webp' id='TicketImage' alt='Second Post Card Image'/>
+                <div id='TicketTextContainer'>
+                    <div id='DateContainer'>
+                        <p id='TicketDateTop'>MON</p>
+                        <p id='TicketDateBottom'>July 4</p>
+                    </div>
+                    <div id='TicketTitleContainer'>
+                        <p id='TicketTitle'>Title lorem ipsum</p>
+                        <p id='TicketLocation'>SECU Arena F2</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id='Ticket' onClick={linkRedirect}>
+                <img src='/sampleTicketImage3.webp' id='TicketImage' alt='Third Post Card Image'/>
+                <div id='TicketTextContainer'>
+                    <div id='DateContainer'>
+                        <p id='TicketDateTop'>TUES</p>
+                        <p id='TicketDateBottom'>July 4</p>
+                    </div>
+                    <div id='TicketTitleContainer'>
+                        <p id='TicketTitle'>Title lorem ipsum</p>
+                        <p id='TicketLocation'>SECU Arena F2</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id='Ticket' onClick={linkRedirect}>
+                <img src='/sampleTicketImage4.webp' id='TicketImage' alt='Fourth Post Card Image'/>
+                <div id='TicketTextContainer'>
+                    <div id='DateContainer'>
+                        <p id='TicketDateTop'>WED</p>
+                        <p id='TicketDateBottom'>July 4</p>
+                    </div>
+                    <div id='TicketTitleContainer'>
+                        <p id='TicketTitle'>Title lorem ipsum</p>
+                        <p id='TicketLocation'>SECU Arena F2</p>
+                    </div>
+                </div>
+            </div> 
+            
+            <div id='Ticket' onClick={linkRedirect}>
+                <img src='/sampleTicketImage5.webp' id='TicketImage' alt='Fifth Post Card Image'/>
+                <div id='TicketTextContainer'>
+                    <div id='DateContainer'>
+                        <p id='TicketDateTop'>THU</p>
+                        <p id='TicketDateBottom'>July 4</p>
+                    </div>
+                    <div id='TicketTitleContainer'>
+                        <p id='TicketTitle'>Title lorem ipsum</p>
+                        <p id='TicketLocation'>SECU Arena F2</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id='Ticket' onClick={linkRedirect}>
+                <img src='/sampleTicketImage.webp' id='TicketImage' alt='First Post Card Image'/>
+                <div id='TicketTextContainer'>
+                    <div id='DateContainer'>
+                        <p id='TicketDateTop'>FRI</p>
+                        <p id='TicketDateBottom'>July 4</p>
+                    </div>
+                    <div id='TicketTitleContainer'>
+                        <p id='TicketTitle'>Title lorem ipsum</p>
+                        <p id='TicketLocation'>SECU Arena F2</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id='Ticket' onClick={linkRedirect}>
+                <img src='/sampleTicketImage2.webp' id='TicketImage' alt='Second Post Card Image'/>
+                <div id='TicketTextContainer'>
+                    <div id='DateContainer'>
+                        <p id='TicketDateTop'>MON</p>
+                        <p id='TicketDateBottom'>July 4</p>
+                    </div>
+                    <div id='TicketTitleContainer'>
+                        <p id='TicketTitle'>Title lorem ipsum</p>
+                        <p id='TicketLocation'>SECU Arena F2</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id='Ticket' onClick={linkRedirect}>
+                <img src='/sampleTicketImage3.webp' id='TicketImage' alt='Third Post Card Image'/>
+                <div id='TicketTextContainer'>
+                    <div id='DateContainer'>
+                        <p id='TicketDateTop'>TUES</p>
+                        <p id='TicketDateBottom'>July 4</p>
+                    </div>
+                    <div id='TicketTitleContainer'>
+                        <p id='TicketTitle'>Title lorem ipsum</p>
+                        <p id='TicketLocation'>SECU Arena F2</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id='Ticket' onClick={linkRedirect}>
+                <img src='/sampleTicketImage4.webp' id='TicketImage' alt='Fourth Post Card Image'/>
+                <div id='TicketTextContainer'>
+                    <div id='DateContainer'>
+                        <p id='TicketDateTop'>WED</p>
+                        <p id='TicketDateBottom'>July 4</p>
+                    </div>
+                    <div id='TicketTitleContainer'>
+                        <p id='TicketTitle'>Title lorem ipsum</p>
+                        <p id='TicketLocation'>SECU Arena F2</p>
+                    </div>
+                </div>
+            </div> 
+            
+            <div id='Ticket' onClick={linkRedirect}>
+                <img src='/sampleTicketImage5.webp' id='TicketImage' alt='Fifth Post Card Image'/>
+                <div id='TicketTextContainer'>
+                    <div id='DateContainer'>
+                        <p id='TicketDateTop'>THU</p>
+                        <p id='TicketDateBottom'>July 4</p>
+                    </div>
+                    <div id='TicketTitleContainer'>
+                        <p id='TicketTitle'>Title lorem ipsum</p>
+                        <p id='TicketLocation'>SECU Arena F2</p>
+                    </div>
+                </div>
+            </div>
 
     </div>
     <style>
